@@ -1,8 +1,9 @@
 import { lazy } from 'react'
 import { RouteObject, useRoutes } from 'react-router-dom'
 import Layout from '@/Layout'
+import Loadable from '@/components/Loadable'
 
-const Home = lazy(() => import('@/pages/Home'))
+const Home = Loadable(lazy(() => import('@/pages/Home')))
 
 const route: RouteObject = {
   path: '/',
